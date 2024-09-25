@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ispotifai</title>
+    <link rel="shortcut icon" href="./IMAGES/spotify.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-ns1DWVD0cFtrFekg1WyD3qxtjplmM8vRXxgfsiIj6IsRRl6h7h+1dZ7KOxiT/A7Z" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header_logo">
+            <img src="./IMAGES/logo-spotify.png" alt="Logo Spotify">
+        </div>
+        <nav class="header_nav">
+            <button class="btn_search">
+                <span class="fa fa-search"></span>
+                <span>Buscar</span>
+            </button>
+            <div class="header_search hidden">
+                <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+            </div>
+        </nav>
+        <div class="header_actions">
+            <button class="btn btn_login">
+                <a href="login.html" style="color: inherit; text-decoration: none;">Entrar</a>
+            </button>
+            <button class="btn">Inscreva-se</button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar_section">
+            <button id="libraryBtn" class="btn"><i class="fas fa-book"></i> Sua Biblioteca</button>
+            <p><span class="fa fa-plus"></span></p>
+        </div>
+        <div class="sidebar_section">
+            <button id="createPlaylistBtn" class="btn"><i class="fas fa-plus"></i> Criar playlist</button>
+            <p></p>
+        </div>
+    </aside>
+
+   
+    <main class="main_content">
+        <section class="intro_section">
+            <h1>Boas Vindas</h1>
+        </section>
+
+        <section class="playlists_section">
+            <h2>Playlists em Destaque</h2>
+            <div class="playlists_container">
+                <div class="playlist_card">
+                    <img src="./IMAGES/boas-festas.jpeg" alt="Boas festas">
+                    <span>Boas festas</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/feito-vc.png" alt="Feitos para você">
+                    <span>Feitos para você</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/lançamento.jpeg" alt="Lançamentos">
+                    <span>Lançamentos</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/treinar.jpeg" alt="Para treinar">
+                    <span>Para treinar</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/podcast.jpeg" alt="Podcasts">
+                    <span>Podcasts</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/sertanejo.jpeg" alt="Sertanejo">
+                    <span>Sertanejo</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/pagode.jpeg" alt="Samba e pagode">
+                    <span>Samba e pagode</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/funk.jpeg" alt="Funk">
+                    <span>Funk</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/mpb.jpeg" alt="MPB">
+                    <span>MPB</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/rock.jpeg" alt="Rock">
+                    <span>Rock</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/rap.jpeg" alt="Hip Hop">
+                    <span>Hip Hop</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/indie.jpeg" alt="Indie">
+                    <span>Indie</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/relax.jpeg" alt="Relax">
+                    <span>Relax</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/latina.jpeg" alt="Música Latina">
+                    <span>Música Latina</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="artist_section">
+            <h2>Artistas em Destaque</h2>
+            <div class="artists_container">
+                <div class="artist_card">
+                    <a href="destinoo.html#djavan"> <!-- identificador -->
+                        <img src="./IMAGES/djavan-spotify.jpeg" alt="Artista 1">
+                        <div class="play_icon">▶</div>
+                    </a>
+                    <span>Djavan</span>
+                </div>
+
+                <div class="artist_card">
+                    <a href="destinoo.html#matue"> <!-- identificador -->
+                        <img src="./IMAGES/matue.jpeg" alt="Artista 2">
+                        <div class="play_icon">▶</div>
+                    </a>
+                    <span>Matuê</span>
+                </div>
+
+                <div class="artist_card">
+                    <img src="./IMAGES/turma-do-pagode.png" alt="Artista 3">
+                    <span>Turma do Pagode</span>
+                    <div class="play_icon">▶</div>
+                </div>
+                <div class="artist_card">
+                    <img src="./IMAGES/charlie-brownJR.jpeg" alt="Artista 4">
+                    <span>Charlie Brown Jr.</span>
+                    <div class="play_icon">▶</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Criar Playlist -->
+    <div id="loginModalPlaylist" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalPlaylist">&times;</span>
+            <h2>Atenção</h2>
+            <p>Para criar sua playlist e curtir o Spotify à vontade, entre na nossa plataforma.</p>
+            <button onclick="window.location.href='login.html'">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Modal para Biblioteca -->
+    <div id="loginModalLibrary" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalLibrary">&times;</span>
+            <h2>Atenção</h2>
+            <p>Para acessar sua biblioteca e curtir suas músicas favoritas, entre na nossa plataforma.</p>
+            <button onclick="window.location.href='login.html'">Entrar</button>
+        </div>
+    </div>
+
+    <script>
+        // Remove qualquer origem anterior quando o usuário acessar a página 'index.html'
+        localStorage.removeItem('origem');
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

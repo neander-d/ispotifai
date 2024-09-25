@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMAGES/spotify.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Redefinir Senha - Djavan Music</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #faeeee;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #146b1f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        nav a {
+            margin: 0 20px;
+            color: #ffda79;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 5px;
+        }
+        nav a:hover {
+            color: #fff;
+            border-bottom: 2px solid #ffda79;
+        }
+        .container {
+            background-color: #181818;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Redefinir Senha - Djavan Music</h1>
+    </header>
+
+    <div class="container">
+        <h2>Redefinir Senha</h2>
+        <form id="reset-password-form">
+            <input type="email" name="email" placeholder="Seu e-mail" >
+            <input type="password" name="new_password" placeholder="Nova Senha">
+            <input type="password" name="confirm_password" placeholder="Confirmar Senha">
+            <input type="submit" value="Redefinir Senha">
+        </form>
+    </div>
+
+    <footer>
+        <p><a href="login.html">Voltar ao Login</a></p>
+    </footer>
+    <script>
+        // Função para redirecionar após redefinir a senha
+        document.getElementById('reset-password-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Evita o envio padrão do formulário
+            alert('Senha redefinida com sucesso! Redirecionando para a página de login...');
+            window.location.href = 'login.html';  // Redireciona para a página de login
+        });
+    </script>
+
+</body>
+</html>

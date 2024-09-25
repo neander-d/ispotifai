@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMAGES/spotify.png">
+    <title>Músicas Djavan</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        h1 {
+            margin: 0; /* Remove margens do título */
+            font-size: 2.5rem;
+            color: #1db954;
+            text-align: center;
+        }
+
+        .bio-box {
+            position: absolute;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            height: 100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            cursor: pointer;
+            margin-left: 800px; /* Espaço para a direita */
+        }
+
+        .bio-box:hover {
+            transform: scale(1.05);
+        }
+
+        .bio-box img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .bio-box a {
+            color: #1db954;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .bio-box a:hover {
+            color: #1ed760;
+        }
+
+        .bio-box p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+        }
+
+        .music-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Espaço entre as músicas */
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 40px; /* Espaço entre a biografia e as músicas */
+        }
+
+        .music-item {
+            display: flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .music-item:hover {
+            transform: scale(1.02);
+        }
+
+        .music-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .music-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .music-info {
+            color: #e0e0e0;
+        }
+
+        .music-info h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .music-info p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .music-info a {
+            text-decoration: none;
+            color: #1db954;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .music-info a:hover {
+            color: #1ed760;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                display: block;
+            }
+
+            .bio-box {
+                display: block;
+                margin: 20px auto;
+                position: static; /* Para ficar abaixo do título em mobile */
+            }
+
+            .music-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .music-item img {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .home-button {
+            position: absolute;
+            top: 60px;
+            right: 1200px;
+            background-color: #0f7d35;
+            color: #020202;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" id="nav-inicio">
+        <i class="fas fa-home"></i>
+    </button>
+
+    <!-- Container para título e biografia -->
+    <div class="header-container">
+        <h1>Músicas Djavan</h1>
+        <div class="bio-box" onclick="window.open('bio_djavan.html', '_blank')">
+            <img src="./IMAGES/djavan_bio.jpg" alt="Djavan">
+            <p>Saiba mais sobre <a href="bio_djavan.html" target="_blank">Djavan</a></p>
+        </div>
+    </div>
+
+    <!-- Container para as músicas -->
+    <div class="music-container">
+        <div class="music-item" onclick="window.location.href='amorpuro.html'">
+            <a href="amorpuro-djavan.html">
+                <img src="./IMAGES/um-amorpuro.jpeg" alt="Um amor puro">
+            </a>
+            <div class="music-info">
+                <h2><a href="amorpuro-djavan.html">Um amor puro</a></h2>
+                <p>Ouvintes: 1.200.000</p>
+                <p>Duração: 5:28</p>
+            </div>
+        </div>
+
+        <div class="music-item" onclick="window.location.href='oceano.html'">
+            <a href="oceano-djavan.html">
+                <img src="./IMAGES/oceano.jpeg" alt="Oceano">
+            </a>
+            <div class="music-info">
+                <h2><a href="oceano-djavan.html">Oceano</a></h2>
+                <p>Ouvintes: 950.000</p>
+                <p>Duração: 4:10</p>
+            </div>
+        </div>
+
+        <div class="music-item" onclick="window.location.href='flor-delis.html'">
+            <a href="flor-delis-djavan.html">
+                <img src="./IMAGES/flordelis.jpeg" alt="Flor de Lis">
+            </a>
+            <div class="music-info">
+                <h2><a href="flor-delis.html">Flor de Lis</a></h2>
+                <p>Ouvintes: 870.000</p>
+                <p>Duração: 3:43</p>
+            </div>
+        </div>
+
+        <div class="music-item">
+            <a href="meubemquerer-djavan.html">
+                <img src="./IMAGES/meubem-querer.jpeg" alt="Meu bem querer">
+            </a>
+            <div class="music-info">
+                <h2><a href="meubemquerer-djavan.html">Meu bem querer</a></h2>
+                <p>Ouvintes: 1.100.000</p>
+                <p>Duração: 3:24</p>
+            </div>
+        </div>
+
+        <div class="music-item">
+            <a href="se-djavan.html">
+                <img src="./IMAGES/se....jpeg" alt="Se...">
+            </a>
+            <div class="music-info">
+                <h2><a href="se-djavan.html">Se...</a></h2>
+                <p>Ouvintes: 1.500.000</p>
+                <p>Duração: 4:51</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setLocalStorage() {
+            if (document.referrer.includes('home-logada.html')) {
+                localStorage.setItem('origem', 'home-logada');
+            }
+        }
+
+        function redirectInicio() {
+            const origem = localStorage.getItem('origem');
+            if (origem === 'home-logada') {
+                window.location.href = 'home-logada.html'; // Redireciona para a página logada
+            } else {
+                window.location.href = 'index.html'; // Redireciona para a página sem login
+            }
+        }
+
+        document.getElementById('nav-inicio').onclick = redirectInicio;
+
+        setLocalStorage();
+    </script>
+</body>
+</html>

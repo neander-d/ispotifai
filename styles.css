@@ -1,0 +1,350 @@
+/* Estilo básico do body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+ /* Estilos do modal */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.close {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff0000;
+}
+
+/* Estilo do header */
+.header {
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Estilo da logo no header */
+.header_logo img {
+    height: 40px;
+}
+
+/* Estilo da barra de navegação no header */
+.header_nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.header_nav .nav_item {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header_actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 2%;
+}
+.header_nav .btn_search {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+ 
+
+}
+.header_search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+   
+}
+
+.header_search.hidden {
+    display: none;
+}
+
+.header_search input {
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #f3f2f4;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+    transition: border-color 0.3s;
+    background-color: #000;
+    color: #e0e0e0;
+    
+}
+
+.header_search input:focus {
+    border-color: #07b143;
+}
+
+.search_input {
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #fffdfd;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+    transition: border-color 0.3s;
+    
+}
+
+.search_input:focus {
+    border-color: #1db954;
+}
+
+.btn {
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    
+}
+
+.btn:hover {
+    background-color: #1ed760;
+}
+
+.btn_login {
+    background-color: #444;
+}
+
+.btn_login:hover {
+    background-color: #555;
+}
+
+/* Estilo da sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* Ajustado para considerar a altura do header */
+    position: fixed;
+    top: 60px; /* Ajustado para abaixo do header */
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Estilo da sidebar em dispositivos menores */
+@media (max-width: 788px) {
+    .sidebar {
+        width: 100px; /* Diminuído para caber melhor em telas pequenas */
+        padding: 10px;
+    }
+
+    .sidebar .btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sidebar .btn i {
+        display: block;
+        font-size: 20px;
+    }
+
+    .sidebar .btn span {
+        display: none;
+    }
+}
+
+/* Estilo da main */
+.main_content {
+    margin-left: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: margin-left 0.3s;
+}
+
+/* Ajusta a margem da main quando a sidebar é reduzida */
+@media (max-width: 788px) {
+    .main_content {
+        margin-left: 80px; /* Ajustado para alinhar com a sidebar menor */
+    }
+}
+
+/* Seções de Playlists e Artistas */
+.playlists_container,
+.artists_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Estilo dos cards de playlist e artista */
+.playlist_card,
+.artist_card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 150px;
+    text-align: center;
+    position: relative; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration:none; /* Remove o sublinhado do link */
+    color: inherit; /* Garante que o texto do link herde a cor */
+}
+
+/* Remove o sublinhado do texto dos links */
+.playlist_card:hover,
+.artist_card:hover {
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Card de artista com imagem redonda */
+.artist_card img {
+    border-radius: 50%; /* Torna a imagem redonda */
+}
+
+/* Estilo das imagens nos cards */
+.playlist_card img,
+.artist_card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo do texto dos cards */
+.playlist_card span,
+.artist_card span {
+    display: block;
+    padding: 5px;
+    color: #3a3838;
+}
+
+/* Estilo do ícone de play */
+.play_icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1db954; /* Ícone verde */
+    color: #000; /* Símbolo de play preto */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+/* Exibe o ícone de play ao passar o mouse no card */
+.playlist_card:hover .play_icon,
+.artist_card:hover .play_icon {
+    opacity: 1; /* Ícone aparece com efeito */
+}
+
+/* Efeito de destaque ao passar o mouse sobre o ícone de play */
+.play_icon:hover {
+    transform: scale(1.2); /* Ícone de play aumenta */
+    background-color: #1ed760; /* Fica um verde mais claro */
+}
+
+/* Efeito de destaque ao passar o mouse sobre o card */
+.playlist_card:hover,
+.artist_card:hover {
+    transform: scale(1.05); /* Efeito de destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+/* Estilo da seção de boas-vindas */
+.intro_section {
+    margin-top: 80px; /* Ajustado para não ficar sobreposto ao header */
+    padding: 20px;
+}
+
+.intro_section h1,
+.intro_section h2 {
+    margin: 0;
+    color: #333;
+}

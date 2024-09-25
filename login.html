@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMAGES/spotify.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Login - Spotify Music</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #faeeee;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0d4e16;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        .container {
+            background-color: #181818;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            display: inline-block;
+        }
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+        .password-container i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffffff;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #065009;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0e5712;
+        }
+        .signup-link, .forgot-password-link {
+            margin-top: 15px;
+            display: block;
+            color: #bcc8be;
+            text-decoration: none;
+        }
+        .signup-link:hover, .forgot-password-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Login - Spotify Music</h1>
+    </header>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nome de Usuário" >
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Senha" >
+                <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+            <input type="submit" value="Entrar">
+        </form>
+        <a href="signup.html" class="signup-link">Não tem uma conta? Cadastre-se</a>
+        <a href="redefinir-senha.html" class="forgot-password-link">Esqueceu a senha?</a>
+    </div>
+
+    <footer>
+        <p><a href="index.html">Voltar ao Início</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordField = document.getElementById('password');
+            const loginForm = document.getElementById('loginForm');
+            const usernameField = document.getElementById('username');
+
+            togglePassword.addEventListener('click', () => {
+                const type = passwordField.type === 'password' ? 'text' : 'password';
+                passwordField.type = type;
+                togglePassword.classList.toggle('fa-eye-slash');
+            });
+
+            // Mover entre os inputs ao pressionar "Enter"
+            usernameField.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    passwordField.focus();
+                }
+            });
+
+            passwordField.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    redirectToHome(); // Redireciona ao pressionar "Enter"
+                }
+            });
+
+            // Redirecionar ao clicar no botão "Entrar"
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio do formulário
+                redirectToHome(); // Redireciona para a página de destino
+            });
+
+            // Função para redirecionar
+            function redirectToHome() {
+                const username = usernameField.value.trim();
+                const password = passwordField.value.trim();
+                if (username && password) {
+                    // Redireciona para a página de destino
+                    window.location.href = 'home-logada.html'; 
+                } else {
+                    alert('Por favor, preencha todos os campos.');
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

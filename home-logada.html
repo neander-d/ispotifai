@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="shortcut icon" href="IMAGES/spotify.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-ns1DWVD0cFtrFekg1WyD3qxtjplM8vRXxgfsiIj6IsRRl6h7h+1dZ7KOxiT/A7Z" crossorigin="anonymous">
+    <style>
+        /* Adicionando estilo para a imagem do usuário */
+        .user_profile {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 30px;
+        }
+
+        .user_image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .btn_logout {
+            margin-left: 15px;
+            padding: 8px 12px;
+            background-color: #1db954;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn_logout:hover {
+            background-color: #1aa34a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header_logo">
+            <img src="./IMAGES/logo-spotify.png" alt="Logo Spotify">
+        </div>
+        <nav class="header_nav">
+            <button class="btn_search">
+                <span class="fa fa-search"></span>
+                <span>Buscar</span>
+            </button>
+            <div class="header_search hidden">
+                <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+            </div>
+        </nav>
+        <div class="header_actions">
+            <!-- Imagem do usuário -->
+            <div class="user_profile">
+                <img src="./IMAGES/henrique.jpeg" alt="Foto do usuário" class="user_image">
+                <button class="btn_logout" onclick="window.location.href='index.html'">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar_section">
+            <button class="btn"><i class="fas fa-book"></i> Sua Biblioteca</button> 
+            <p><span class="fa fa-plus"></span></p>
+        </div>
+        <div class="sidebar_section">
+            <button class="btn"><i class="fas fa-plus"></i> Criar playlist</button> 
+            <p><span class="fa fa-plus"></span></p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main_content">
+        <section class="intro_section">
+       
+            <h1>Bem-vindo, Henrique!</h1>
+        </section>
+
+        <section class="playlists_section">
+            <h2> Suas playlists </h2>
+            <div class="playlists_container">
+                <div class="playlist_card">
+                    <img src="./IMAGES/boas-festas.jpeg" alt="Boas festas">
+                    <span>Boas festas</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/feito-vc.png" alt="Feitos para você">
+                    <span>Feitos para você</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/lançamento.jpeg" alt="Lançamentos">
+                    <span>Lançamentos</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/treinar.jpeg" alt="Para treinar">
+                    <span>Para treinar</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/podcast.jpeg" alt="Podcasts">
+                    <span>Podcasts</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/sertanejo.jpeg" alt="Sertanejo">
+                    <span>Sertanejo</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/pagode.jpeg" alt="Samba e pagode">
+                    <span>Samba e pagode</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/funk.jpeg" alt="Funk">
+                    <span>Funk</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/mpb.jpeg" alt="MPB">
+                    <span>MPB</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/rock.jpeg" alt="Rock">
+                    <span>Rock</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/rap.jpeg" alt="Hip Hop">
+                    <span>Hip Hop</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/indie.jpeg" alt="Indie">
+                    <span>Indie</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/relax.jpeg" alt="Relax">
+                    <span>Relax</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/latina.jpeg" alt="Música Latina">
+                    <span>Música Latina</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="artist_section">
+            <h2>Seus artistas favoritos</h2>
+            <div class="artists_container">
+                <div class="artist_card" class="artist_card">
+                    <a href="destinoo.html#djavan">
+                    <img src="./IMAGES/djavan-spotify.jpeg" alt="Artista 1">
+                    <div class="play_icon">▶</div>
+                </a>
+                <span>Djavan</span>
+                </div>
+               
+                <div class="artist_card">
+                    <a href="destinoo.html#matue">
+                    <img src="./IMAGES/matue.jpeg" alt="Artista 2">
+                    <div class="play_icon">▶</div>
+                </a>
+                    <span>Matuê</span>
+                </div>
+            
+                <div class="artist_card">
+                    <img src="./IMAGES/turma-do-pagode.png" alt="Artista 3">
+                    <span>Turma do Pagode</span>
+                    <div class="play_icon">▶</div>
+                </div>
+                <div class="artist_card">
+                    <img src="./IMAGES/charlie-brownJR.jpeg" alt="Artista 4">
+                    <span>Charlie Brown Jr.</span>
+                    <div class="play_icon">▶</div>
+                </div>
+            </div>
+        <!-- Nova Seção: Feitos para Henrique -->
+        <section class="playlists_section">
+            <h2>Feitos para Henrique</h2>
+            <div class="playlists_container">
+                <div class="playlist_card">
+                    <img src="./IMAGES/descanso.jpeg" alt="Descanso">
+                    <span>Descanso</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/roadtrip.jpeg" alt="Road Trip">
+                    <span>Road Trip</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/focus.jpeg" alt="Focus">
+                    <span>Concentração</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/corrida.jpeg" alt="Corrida">
+                    <span>Corrida</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova Seção: Tocados Recentemente -->
+        <section class="playlists_section">
+            <h2>Tocados Recentemente</h2>
+            <div class="playlists_container">
+                <div class="playlist_card">
+                    <img src="./IMAGES/oceano.jpeg" alt="Djavan">
+                    <span>Djavan - Oceano</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/ceu-azul.jpeg" alt="Charlie Brown Jr.">
+                    <span>Charlie Brown Jr. - Céu Azul</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/cobertor-orelha.jpeg" alt="Turma do Pagode">
+                    <span>Turma do Pagode - Cobertor de Orelha</span>
+                </div>
+                <div class="playlist_card">
+                    <img src="./IMAGES/maquina-dotempo.jpeg" alt="Matuê">
+                    <span>Matuê - Máquina do Tempo</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // Remove qualquer origem anterior quando o usuário acessar a página 'index.html'
+        localStorage.removeItem('origem');
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

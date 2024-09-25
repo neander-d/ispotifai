@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IMAGES/spotify.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <title>Meu Bem Querer - Djavan</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #faeeee;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0d5317;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+nav a {
+    margin: 0 20px;
+    color: #faf9f6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #31d149;
+}
+
+.container {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+audio {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Djavan</h1>
+        <nav>
+            <a href="#" id="nav-inicio">Início</a>
+            <a href="bio_djavan.html" target="_blank">Sobre Djavan</a>
+            <a href="Djavan.html">Outras Músicas</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Meu Bem Querer</h2>
+        <img src="./IMAGES/djavan-meubem.jpeg" alt="Djavan - Meu Bem Querer Album">
+        <p><strong>Álbum:</strong> Alumbramento</p>
+        <audio controls>
+            <source src="./audio/spotifydown.com - Meu Bem Querer.mp3" type="audio/mpeg">
+        </audio>
+        
+        <p>
+            Meu bem querer é segredo, é sagrado<br>
+            Está sacramentado em meu coração<br>
+            Meu bem querer, tem um quê de pecado<br>
+            Acariciado pela emoção
+        </p>
+        <p>
+            Meu bem querer, meu encanto<br>
+            Tô sofrendo tanto, amor<br>
+            E o que é o sofrer<br>
+            Para mim que estou<br>
+            Jurado pra morrer de amor
+        </p>
+        <p>
+            Meu bem querer é segredo, é sagrado<br>
+            Está sacramentado em meu coração<br>
+            Meu bem querer, tem um quê de pecado<br>
+            Acariciado pela emoção
+        </p>
+        <p>
+            Meu bem querer, meu encanto<br>
+            Tô sofrendo tanto, amor<br>
+            E o que é o sofrer<br>
+            Para mim que estou<br>
+            Jurado pra morrer de amor
+        </p>
+
+        <footer>
+            <p><a href="#" id="link-inicio">Voltar ao Início</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Função para definir localStorage ao sair da página home-logada.html
+        function setLocalStorage() {
+            if (document.referrer.includes('home-logada.html')) {
+                localStorage.setItem('origem', 'home-logada');
+            }
+        }
+
+        // Função de redirecionamento para o botão e o link "Início"
+        function redirectInicio() {
+            const origem = localStorage.getItem('origem');
+            if (origem === 'home-logada') {
+                window.location.href = 'home-logada.html'; // Redireciona para a página logada
+            } else {
+                window.location.href = 'index.html'; // Redireciona para a página sem login
+            }
+        }
+
+        // Aplica a mesma lógica ao link "Início" no menu de navegação
+        document.getElementById('nav-inicio').addEventListener('click', redirectInicio);
+
+        // Aplica a lógica ao link "Voltar ao Início" no footer
+        document.getElementById('link-inicio').addEventListener('click', redirectInicio);
+
+        // Chama a função para configurar o localStorage
+        setLocalStorage();
+    </script>
+
+</body>
+</html>

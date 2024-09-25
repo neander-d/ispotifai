@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia Geral - Djavan</title>
+    <link rel="shortcut icon" href="IMAGES/spotify.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f;
+            color: #faeeee;
+        }
+        
+        h4 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: #1db954;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #181818;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: #ffffff;
+            text-align: center;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .info-table th, .info-table td {
+            padding: 10px;
+            border: 1px solid #e4dbdb;
+            text-align: left;
+        }
+        .info-table th {
+            background-color: #333;
+            color: #ffffff;
+        }
+        .info-table td {
+            background-color: #222;
+            color: #faeeee;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            max-width: 200px;
+            border-radius: 8px;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 1200px;
+            background-color: #0f7d35;
+            color: #010101;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" id="nav-inicio">
+        <i class="fas fa-home"></i>
+    </button>
+        <h4>Biografia Geral - Djavan</h4>
+    <div class="container">
+        <h1>Djavan</h1>
+        <img src="./IMAGES/djavan_bio.jpg" alt="Djavan em 2023">
+
+        <table class="info-table">
+            <tr>
+                <th>Nome completo</th>
+                <td>Djavan Caetano Viana</td>
+            </tr>
+            <tr>
+                <th>Também conhecido(a) como</th>
+                <td>Djavan</td>
+            </tr>
+            <tr>
+                <th>Nascimento</th>
+                <td>27 de janeiro de 1949 (75 anos)</td>
+            </tr>
+            <tr>
+                <th>Local de nascimento</th>
+                <td>Maceió, AL, Brasil</td>
+            </tr>
+            <tr>
+                <th>Nacionalidade</th>
+                <td>brasileiro</td>
+            </tr>
+            <tr>
+                <th>Gênero(s)</th>
+                <td>MPB, jazz, bossa nova</td>
+            </tr>
+            <tr>
+                <th>Ocupação(ões)</th>
+                <td>cantor, compositor, produtor musical, violonista</td>
+            </tr>
+            <tr>
+                <th>Instrumento(s)</th>
+                <td>vocal, violão, guitarra</td>
+            </tr>
+            <tr>
+                <th>Modelos de instrumentos</th>
+                <td>Sadowsky Nylon guitar, Fender Telecaster, Gibson SG, Yamaha AEX-500</td>
+            </tr>
+            <tr>
+                <th>Período em atividade</th>
+                <td>1968-presente</td>
+            </tr>
+        </table>
+
+        <a href="https://pt.wikipedia.org/wiki/Djavan">Mais detalhes</a>
+    </div>
+
+    <footer>
+        &copy; 2024 Página dedicada a Djavan
+    </footer>
+    <script>
+        // Função para definir localStorage ao sair da página home-logada.html
+        function setLocalStorage() {
+            if (document.referrer.includes('home-logada.html')) {
+                localStorage.setItem('origem', 'home-logada');
+            }
+        }
+
+        // Função de redirecionamento para o botão e o link "Início"
+        function redirectInicio() {
+            const origem = localStorage.getItem('origem');
+            if (origem === 'home-logada') {
+                window.location.href = 'home-logada.html'; // Redireciona para a página logada
+            } else {
+                window.location.href = 'index.html'; // Redireciona para a página sem login
+            }
+        }
+
+        // Aplica a mesma lógica ao link "Início" no menu de navegação
+        document.getElementById('nav-inicio').addEventListener('click', redirectInicio);
+
+        // Aplica a lógica ao link "Voltar ao Início" no footer
+        document.getElementById('link-inicio').addEventListener('click', redirectInicio);
+
+        // Chama a função para configurar o localStorage
+        setLocalStorage();
+    </script>
+    
+</body>
+</html>
