@@ -5,89 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Músicas</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
-            color: #faeeee;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #faeeee;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-            background-color: #3b0770e6;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            margin: 15px 0;
-            font-size: 18px;
-        }
-
-        nav a {
-            margin: 0 20px;
-            color: #faf9f6;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            padding-bottom: 5px;
-        }
-
-        nav a:hover {
-            color: #fff;
-            border-bottom: 2px solid #31d149;
-        }
-
-        .container {
-            background-color: #181818;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        section {
+header {
+    background-color: #3b0770e6;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+section {
             display: none; /* Todas as seções estão ocultas inicialmente */
         }
 
-        h2 {
-            color: #ffffff;
-            text-align: center;
-            font-size: 2rem;
-        }
 
-        p {
-            font-size: 15px;
-            line-height: 1.6;
-            margin: 15px 0;
-        }
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-            text-align: center;
-        }
+nav {
+    margin: 15px 0;
+    font-size: 18px;
+}
 
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
+nav a {
+    margin: 0 20px;
+    color: #faf9f6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+nav a:hover {
+    color: #fff;
+    border-bottom: 2px solid #31d149;
+}
+
+.container {
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+audio {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
     </style>
 </head>
 <body>
@@ -102,128 +119,127 @@
 </header>
 
 <div class="container">
-   
     <section id="musica1">
-        <h2>M4 (feat. Matuê)</h2>
-        <img src="./IMAGES/m4-matue (1).jpeg" alt="Matuê - Música Album">
-        <p><strong>Álbum:</strong> </p>
-        <audio controls>
-            <source src="./audio/spotifydown.com - M4.mp3" type="audio/mpeg">
-        </audio>
-        <p>Hahaha</p>
-        <p>Mano, olha esse beat, véi</p>
-        <p>
-            Parece que vai entrar um desenho animado do nada, tá ligado? Hahaha<br>
-            Fiz um bagulho muito engraçado nisso, mano<br>
-            Saca aí, saca aí<br>
-            Ah, ah, ah<br>
-            Ye, ye, ye<br>
-            Oh<br>
-            Uh, uh, wow
-        </p>
-        <p>
-            Tem uma Glock esperando por mim<br>
-            M4 gritando meu nome (uh, ahn)<br>
-            Mirei pro lado, inveja consome<br>
-            Bate de frente, porra, tu não é homem?<br>
-            Calibre 12, eu só falo de arma<br>
-            Deve ser porque eu só durmo com ela<br>
-            Eu amo minha scar, eu não amo mais ela<br>
-            Fuck bitch, salve mano Predella
-        </p>
-        <p>
-            O ano passado, sabe, eu sumi, mas<br>
-            Eu voltei, A+, to por cima yeah<br>
-            Eu tô fazendo por meus irmão<br>
-            Me traíram, doeu no coração<br>
-            Eu não acho que eu seja bom<br>
-            Mas eu já fui pior, slatt<br>
-            Hoje eu conquisto botando meu dom<br>
-            Eu era team Prior, ye
-        </p>
-        <p>
-            Fogo nos racista, assim que é bom<br>
-            Mente consumida por essa erva<br>
-            Quem nunca errou pode guardar sua pedra<br>
-            O que tem no meu pescoço, nego, te cega<br>
-            Eu desvio esse tiro e ainda pulo tua inveja<br>
-            Ahn, ahn, ahn, hmm (hmm)<br>
-            Eu tô em Cancún<br>
-            Te tiro de Uldum<br>
-            A grana eu faço, uhum
-        </p>
-        <p>
-            Tem uma Glock esperando por mim<br>
-            M4 gritando meu nome (uh, ahn)<br>
-            Mirei pro lado, inveja consome<br>
-            Bate de frente, porra, tu não é homem?<br>
-            Calibre 12, eu só falo de arma<br>
-            Deve ser porque eu só durmo com ela<br>
-            Eu amo minha scar, eu não amo mais ela<br>
-            Fuck bitch, salve mano Predella
-        </p>
-        <p>
-            Tudo azul (céu)<br>
-            Carro faz vrum<br>
-            Bala na mente<br>
-            Ouro no dente<br>
-            Sou legendário<br>
-            Flow imaginário (wow)<br>
-            Tô no kart, Mario (skrrt)<br>
-            Te ganhei, otário (uh, uh, uh, uh)
-        </p>
-        <p>
-            Hmm, hmm, hmm<br>
-            Um, dois, três, quatro<br>
-            Hmm, hmm, hmm<br>
-            Feijão no prato<br>
-            Hmm, hmm, hmm<br>
-            Hehehe (hum)<br>
-            Hmm, hmm, hmm (huh)
-        </p>
-        <p>
-            Tem uma Glock esperando<br>
-            E duas Mac-10 com o pente estendido<br>
-            Quiser bater de frente, fica estendido<br>
-            Tentar me atravessar, tu tá fudido<br>
-            Eu vou te dar logo um novo umbigo<br>
-            Tu não é de gang, mano<br>
-            Mas sou violento e tenho grana<br>
-            Ele vai virar um animal<br>
-            Vejo as dona de casa passar mal<br>
-            (Em três, dois, um)
-        </p>
-        <p>
-            Tô com a Draco na minha mochila<br>
-            Rapariga esperando por mim<br>
-            Milhares de fãs que gritam meu nome (Matheus)<br>
-            Eles querem mais do Tuêzin (Matheus)<br>
-            Arranca um pedaço dessa minha vida louca<br>
-            Lean não é vício pra mim<br>
-            Inveja dinheiro e vivência pra mim<br>
-            Tudo que é bom tem algo ruim<br>
-            Mantenho a consciência, manin
-        </p>
-        <p>
-            Tudo azul<br>
-            Carro faz vrum<br>
-            Bala na mente (bala)<br>
-            Ouro no dente<br>
-            Sou milionário<br>
-            Extraordinário<br>
-            Te ganhei, otário (uh, uh, uh, uh)
-        </p>
-        <p>
-            Wow, wow, wow<br>
-            Teto que gira esse din (ah)
-        </p>
+    <h2>M4 (feat. Matuê)</h2>
+    <img src="./IMAGES/m4-matue (1).jpeg" alt="Matuê - Música Album">
+    <p><strong>Álbum:</strong> </p>
+    <audio controls>
+        <source src="./audio/spotifydown.com - M4.mp3" type="audio/mpeg">
+    </audio>
 
-    </section>
+    <p>Hahaha</p>
+    <p>Mano, olha esse beat, véi</p>
+    <p>
+        Parece que vai entrar um desenho animado do nada, tá ligado? Hahaha<br>
+        Fiz um bagulho muito engraçado nisso, mano<br>
+        Saca aí, saca aí<br>
+        Ah, ah, ah<br>
+        Ye, ye, ye<br>
+        Oh<br>
+        Uh, uh, wow
+    </p>
+    <p>
+        Tem uma Glock esperando por mim<br>
+        M4 gritando meu nome (uh, ahn)<br>
+        Mirei pro lado, inveja consome<br>
+        Bate de frente, porra, tu não é homem?<br>
+        Calibre 12, eu só falo de arma<br>
+        Deve ser porque eu só durmo com ela<br>
+        Eu amo minha scar, eu não amo mais ela<br>
+        Fuck bitch, salve mano Predella
+    </p>
+    <p>
+        O ano passado, sabe, eu sumi, mas<br>
+        Eu voltei, A+, to por cima yeah<br>
+        Eu tô fazendo por meus irmão<br>
+        Me traíram, doeu no coração<br>
+        Eu não acho que eu seja bom<br>
+        Mas eu já fui pior, slatt<br>
+        Hoje eu conquisto botando meu dom<br>
+        Eu era team Prior, ye
+    </p>
+    <p>
+        Fogo nos racista, assim que é bom<br>
+        Mente consumida por essa erva<br>
+        Quem nunca errou pode guardar sua pedra<br>
+        O que tem no meu pescoço, nego, te cega<br>
+        Eu desvio esse tiro e ainda pulo tua inveja<br>
+        Ahn, ahn, ahn, hmm (hmm)<br>
+        Eu tô em Cancún<br>
+        Te tiro de Uldum<br>
+        A grana eu faço, uhum
+    </p>
+    <p>
+        Tem uma Glock esperando por mim<br>
+        M4 gritando meu nome (uh, ahn)<br>
+        Mirei pro lado, inveja consome<br>
+        Bate de frente, porra, tu não é homem?<br>
+        Calibre 12, eu só falo de arma<br>
+        Deve ser porque eu só durmo com ela<br>
+        Eu amo minha scar, eu não amo mais ela<br>
+        Fuck bitch, salve mano Predella
+    </p>
+    <p>
+        Tudo azul (céu)<br>
+        Carro faz vrum<br>
+        Bala na mente<br>
+        Ouro no dente<br>
+        Sou legendário<br>
+        Flow imaginário (wow)<br>
+        Tô no kart, Mario (skrrt)<br>
+        Te ganhei, otário (uh, uh, uh, uh)
+    </p>
+    <p>
+        Hmm, hmm, hmm<br>
+        Um, dois, três, quatro<br>
+        Hmm, hmm, hmm<br>
+        Feijão no prato<br>
+        Hmm, hmm, hmm<br>
+        Hehehe (hum)<br>
+        Hmm, hmm, hmm (huh)
+    </p>
+    <p>
+        Tem uma Glock esperando<br>
+        E duas Mac-10 com o pente estendido<br>
+        Quiser bater de frente, fica estendido<br>
+        Tentar me atravessar, tu tá fudido<br>
+        Eu vou te dar logo um novo umbigo<br>
+        Tu não é de gang, mano<br>
+        Mas sou violento e tenho grana<br>
+        Ele vai virar um animal<br>
+        Vejo as dona de casa passar mal<br>
+        (Em três, dois, um)
+    </p>
+    <p>
+        Tô com a Draco na minha mochila<br>
+        Rapariga esperando por mim<br>
+        Milhares de fãs que gritam meu nome (Matheus)<br>
+        Eles querem mais do Tuêzin (Matheus)<br>
+        Arranca um pedaço dessa minha vida louca<br>
+        Lean não é vício pra mim<br>
+        Inveja dinheiro e vivência pra mim<br>
+        Tudo que é bom tem algo ruim<br>
+        Mantenho a consciência, manin
+    </p>
+    <p>
+        Tudo azul<br>
+        Carro faz vrum<br>
+        Bala na mente (bala)<br>
+        Ouro no dente<br>
+        Sou milionário<br>
+        Extraordinário<br>
+        Te ganhei, otário (uh, uh, uh, uh)
+    </p>
+    <p>
+        Wow, wow, wow<br>
+        Teto que gira esse din (ah)
+    </p>
+</section>
 
     <!-- Seção 2 - Música 2 -->
     <section id="musica2">
         <h2>Música 2 - Quer Voar</h2>
-        <p>Aqui você colocará os detalhes da segunda música.</p>
+        <p> segunda música.</p>
     </section>
 
     <!-- Seção 3 - Música 3 -->
