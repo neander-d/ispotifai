@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Músicas</title>
     <style>
-      body {
+           body {
     font-family: Arial, sans-serif;
     background-color: #0f0f0f;
     color: #faeeee;
@@ -115,19 +115,22 @@ footer a:hover {
         <a href="#" id="nav-inicio">Início</a>
         <a href="bio_matue.html" target="_blank">Sobre Matuê</a>
         <a href="matue.html">Outras Músicas</a>
+        <a href="#musica1" class="nav-link">Música 1</a>
+        <a href="#musica2" class="nav-link">Música 2</a>
+        <a href="#musica3" class="nav-link">Música 3</a>
+        <a href="#musica4" class="nav-link">Música 4</a>
     </nav>
 </header>
 
 <div class="container">
     <section id="musica1">
-    <h2>M4 (feat. Matuê)</h2>
-    <img src="./IMAGES/m4-matue (1).jpeg" alt="Matuê - Música Album">
-    <p><strong>Álbum:</strong> </p>
-    <audio controls>
-        <source src="./audio/spotifydown.com - M4.mp3" type="audio/mpeg">
-    </audio>
-
-    <p>Hahaha</p>
+        <h2>M4 (feat. Matuê)</h2>
+        <img src="./IMAGES/m4-matue (1).jpeg" alt="Matuê - Música Album">
+        <p><strong>Álbum:</strong> </p>
+        <audio controls>
+            <source src="./audio/spotifydown.com - M4.mp3" type="audio/mpeg">
+        </audio>
+       <p>Hahaha</p>
     <p>Mano, olha esse beat, véi</p>
     <p>
         Parece que vai entrar um desenho animado do nada, tá ligado? Hahaha<br>
@@ -234,53 +237,25 @@ footer a:hover {
         Wow, wow, wow<br>
         Teto que gira esse din (ah)
     </p>
-</section>
+    </section>
 
-    <!-- Seção 2 - Música 2 -->
     <section id="musica2">
         <h2>Música 2 - Quer Voar</h2>
-        <p> segunda música.</p>
+        <p> Segunda música.</p>
     </section>
 
-    <!-- Seção 3 - Música 3 -->
     <section id="musica3">
         <h2>Música 3 - A Morte do Autotune</h2>
-        <p> terceira música.</p>
+        <p> Terceira música.</p>
     </section>
 
-    <!-- Seção 4 - Música 4 -->
     <section id="musica4">
         <h2>Música 4 - Máquina do Tempo</h2>
-        <p> quarta música.</p>
+        <p> Quarta música.</p>
     </section>
 </div>
 
-<script> // Função para definir localStorage ao sair da página home-logada.html
-    function setLocalStorage() {
-        if (document.referrer.includes('home-logada.html')) {
-            localStorage.setItem('origem', 'home-logada');
-        }
-    }
-
-    // Função de redirecionamento para o botão e o link "Início"
-    function redirectInicio() {
-        const origem = localStorage.getItem('origem');
-        if (origem === 'home-logada') {
-            window.location.href = 'home-logada.html'; // Redireciona para a página logada
-        } else {
-            window.location.href = 'index.html'; // Redireciona para a página sem login
-        }
-    }
-
-    // Aplica a mesma lógica ao link "Início" no menu de navegação
-    document.getElementById('nav-inicio').addEventListener('click', redirectInicio);
-
-    // Aplica a lógica ao link "Voltar ao Início" no footer
-    document.getElementById('link-inicio').addEventListener('click', redirectInicio);
-
-    // Chama a função para configurar o localStorage
-    setLocalStorage();
-    
+<script>
     function showSection(sectionId) {
         // Oculta todas as seções
         document.getElementById('musica1').style.display = 'none';
@@ -292,17 +267,23 @@ footer a:hover {
         document.getElementById(sectionId).style.display = 'block';
     }
 
-    // Verifica o hash na URL para exibir a seção correspondente
+    // Adiciona eventos de clique a todos os links da navegação
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            const sectionId = this.getAttribute('href').substring(1); // Pega o id da seção
+            showSection(sectionId); // Mostra a seção correspondente
+        });
+    });
+
+    // Verifica o hash na URL para exibir a seção correspondente ou exibe a primeira seção
     window.onload = function() {
         const hash = window.location.hash;
-        if (hash === '#musica1') {
-            showSection('musica1');
-        } else if (hash === '#musica2') {
-            showSection('musica2');
-        } else if (hash === '#musica3') {
-            showSection('musica3');
-        } else if (hash === '#musica4') {
-            showSection('musica4');
+        if (hash) {
+            showSection(hash.substring(1)); // Remove o '#' do hash
+        } else {
+            showSection('musica1'); // Exibe a primeira seção por padrão
         }
     };
 </script>
