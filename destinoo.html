@@ -317,21 +317,20 @@
         </div>
 
     <script>
-        function setLocalStorage() {
-            if (document.referrer.includes('home-logada.html')) {
-                localStorage.setItem('origem', 'home-logada');
-            }
-        }
+       function setLocalStorage() {
+    if (document.referrer.includes('home-logada.html')) {
+        localStorage.setItem('origem', 'home-logada');
+    }
+}
 
-        function redirectInicio() {
-            const origem = localStorage.getItem('origem');
-            if (origem === 'home-logada') {
-                window.location.href = 'home-logada.html';
-            } else {
-                window.location.href = 'index.html';
-            }
-        }
-
+function redirectInicio() {
+    const origem = localStorage.getItem('origem');
+    if (origem === 'home-logada') {
+        window.location.href = 'home-logada.html';
+    } else {
+        window.location.href = 'index.html';
+    }
+}
         function showSection(section) {
             // Oculta todas as seções
             document.getElementById('djavan').style.display = 'none';

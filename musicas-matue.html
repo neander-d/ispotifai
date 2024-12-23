@@ -112,7 +112,7 @@ footer a:hover {
 <header>
     <h1>Matuê</h1>
     <nav>
-        <a href="#" id="nav-inicio">Início</a>
+        <a href="index.html" id="nav-inicio">Início</a>
         <a href="bio_matue.html" target="_blank">Sobre Matuê</a>
         <a href="matue.html">Outras Músicas</a>
         
@@ -253,6 +253,15 @@ footer a:hover {
 </div>
 
 <script>
+     // Função para definir localStorage quando a página é carregada
+    function setLocalStorage() {
+        // Verifica se o usuário veio da home-logada.html
+        if (document.referrer.includes('home-logada.html')) {
+            localStorage.setItem('origem', 'home-logada');
+            localStorage.setItem('seção', window.location.hash); // Armazena a seção atual
+        }
+    }
+
     function showSection(sectionId) {
         // Oculta todas as seções
         document.getElementById('musica1').style.display = 'none';
@@ -274,6 +283,22 @@ footer a:hover {
         });
     });
 
+    // Função de redirecionamento para o botão e o link "Início"
+    function redirectInicio() {
+        const origem = localStorage.getItem('origem');
+        if (origem === 'home-logada') {
+            window.location.href = 'home-logada.html'; // Redireciona para a página logada
+        } else {
+            window.location.href = 'index.html'; // Redireciona para a página sem login
+        }
+    }
+
+    // Aplica a mesma lógica ao link "Início" no menu de navegação
+    document.getElementById('nav-inicio').addEventListener('click', redirectInicio);
+
+    // Chama a função para configurar o localStorage
+    setLocalStorage();
+    
     // Verifica o hash na URL para exibir a seção correspondente ou exibe a primeira seção
     window.onload = function() {
         const hash = window.location.hash;
@@ -286,7 +311,7 @@ footer a:hover {
 </script>
 
 <footer>
-    <p><a href="index.html">Voltar ao Início</a></p>
+    <p><a href="#" id="link-inicio">Voltar ao Início</a></p>
 </footer>
 
 </body>
